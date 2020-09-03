@@ -46,7 +46,7 @@
 <style type="text/scss" lang="scss" scoped>
 .headerBox{
   position: fixed;
-  height:100px;
+  padding:.25rem;
   left:0;
   right:0;
   top:0;
@@ -54,6 +54,8 @@
   .header{
     display: flex;
     align-content: center;
+    font-size:.25rem;
+    color:#fff;
     a{
       color:#fff;
     }
@@ -75,6 +77,8 @@
     }
     .linkBox{
       flex:.5;
+      justify-content: right;
+      text-align: right;
     }
   }
 }

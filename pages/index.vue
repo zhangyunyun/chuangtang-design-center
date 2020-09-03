@@ -18,5 +18,11 @@
 </script>
 
 <style type="text/scss" lang="scss" scoped>
-
+.bannerBox{
+  position: relative;
+  img{
+    position: relative;
+    width:100%;
+  }
+}
 </style>
