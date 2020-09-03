@@ -5,7 +5,7 @@
         <img src="@/assets/images/logo.jpg" alt="">
       </div>
       <div class="addressBox">
-        <i></i>
+        <img src="@/assets/images/address.png" alt="">
         <span>上海</span>
       </div>
       <ul class="navBox">
@@ -67,14 +67,20 @@
     .addressBox{
       flex:.2;
       text-align: center;
+      img{
+        width:.8rem;
+        height:.5rem;
+      }
     }
     .navBox{
       flex:1;
       display: flex;
+      margin-bottom:0;
       li{
         flex: 1;
         a{
           text-align: center;
+          display: block;
         }
       }
     }
