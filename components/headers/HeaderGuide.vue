@@ -45,7 +45,7 @@ export default {
 
 <style type="text/scss" lang="scss" scoped>
 .headers{
-  padding:20px;
+  padding:20rem;
   height:80px;
   .headerSide{
     position: fixed;

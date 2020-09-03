@@ -77,6 +77,6 @@ export default {
   },
   router:{
     //在每页渲染前运行 middleware/middleware.js 中间件的逻辑
-    middleware:'middleware'
+    //middleware:'middleware'
   }
 }
