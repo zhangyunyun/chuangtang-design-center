@@ -23,13 +23,17 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    script: [
+      { src: '/rem/flexible.js', type: 'text/javascript', charset: 'utf-8'}
+    ],
   },
   /*
   ** Global CSS
   */
   css: [
-    'ant-design-vue/dist/antd.css'
+    'ant-design-vue/dist/antd.css',
+    '@/assets/css/reset.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -65,5 +69,14 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+    postcss: [
+      require('postcss-px2rem')({
+        remUnit: 75
+      })
+    ],
+  },
+  router:{
+    //在每页渲染前运行 middleware/middleware.js 中间件的逻辑
+    middleware:'middleware'
   }
 }
