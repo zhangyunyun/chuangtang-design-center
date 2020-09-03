@@ -9,23 +9,11 @@
         <span>上海</span>
       </div>
       <ul class="navBox">
-        <li>
-          <a href="#">首页</a>
-        </li>
-        <li>
-          <a href="#">小程序</a>
-        </li>
-        <li>
-          <a href="#">公众号</a>
-        </li>
-        <li>
-          <a href="#">平台工具</a>
-        </li>
-        <li>
-          <a href="#">网站</a>
-        </li>
-        <li>
-          <a href="#">APP</a>
+        <li v-for="(nav, index) in navList"
+            :key="index"
+            :class="{current:navIndex==index}"
+            v-on:click="changeCurrent(index)">
+          <a href="#">{{nav}}</a>
         </li>
       </ul>
       <div class="linkBox">
@@ -37,7 +25,18 @@
 
 <script>
   export default {
-      name: "headers"
+    name: "headers",
+    data(){
+        return{
+          navIndex:0,
+          navList:['首页','小程序','公众号','平台工具','网站','APP']
+        }
+    },
+    methods:{
+      changeCurrent(index){
+        this.navIndex = index
+      }
+    }
   }
 </script>
 
@@ -78,6 +77,11 @@
       margin-bottom:0;
       li{
         flex: 1;
+        &.current{
+          a{
+            color:#cfa05c;
+          }
+        }
         a{
           text-align: center;
           display: block;
