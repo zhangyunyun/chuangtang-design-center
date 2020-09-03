@@ -56,7 +56,7 @@ export default {
     display: flex;
     align-content: center;
     a{
-      color:#fff;
+      color:#333;
     }
     .logoBox,.addressBox,.navBox,.linkBox{
       flex:1;
