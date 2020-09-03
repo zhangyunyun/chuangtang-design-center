@@ -2,9 +2,7 @@
   <div class="headerBox">
     <div class="header">
       <div class="logoBox">
-        <nuxt to="/index">
-
-        </nuxt>
+        <img src="@/assets/images/logo.jpg" alt="">
       </div>
       <div class="addressBox">
         <i></i>
@@ -54,16 +52,21 @@
   .header{
     display: flex;
     align-content: center;
-    font-size:.25rem;
+    font-size:.28rem;
     color:#fff;
+    height:.8rem;
+    line-height:.8rem;
     a{
       color:#fff;
     }
+    .addressBox,.navBox,.linkBox{}
     .logoBox{
       flex:.3;
+      text-align:left;
     }
     .addressBox{
       flex:.2;
+      text-align: center;
     }
     .navBox{
       flex:1;
