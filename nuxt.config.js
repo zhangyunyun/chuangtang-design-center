@@ -1,4 +1,3 @@
-
 export default {
   /*
   ** Nuxt rendering mode
@@ -26,7 +25,7 @@ export default {
       { rel: 'stylesheet', href: '/assets/css/reset.css'}
     ],
     script: [
-      { src: '/rem/flexible.js', type: 'text/javascript', charset: 'utf-8'}
+      { src: '/js/flexible.js', type: 'text/javascript', charset: 'utf-8'}
     ]
   },
   /*

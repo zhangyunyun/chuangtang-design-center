@@ -30,9 +30,9 @@
     width:100%;
   }
   .sideCont{
-
+    width:1200px;
   }
-  .sideBox{
+  .sideCont-title{
     position:absolute;
     top:calc(50% - 100px);
     left:calc(50% - 600px);
@@ -41,6 +41,7 @@
     h1{
       font-size:.8rem;
       color:#fff;
+      margin-bottom:1rem!important;
     }
     p{
       font-size:.5rem;
