@@ -3,7 +3,9 @@
       <div class="headers">
         <div class="headerSide">
           <div class="logoBox">
-
+            <nuxt to="/index">
+              <img src="" alt="">
+            </nuxt>
           </div>
           <div class="addressBox">
             <i></i>
@@ -58,10 +60,14 @@ export default {
     a{
       color:#333;
     }
-    .logoBox,.addressBox,.navBox,.linkBox{
-      flex:1;
+    .logoBox{
+      flex:.3;
+    }
+    .addressBox{
+      flex:.2;
     }
     .navBox{
+      flex:1;
       display: flex;
       li{
         flex: 1;
@@ -69,6 +75,9 @@ export default {
           text-align: center;
         }
       }
+    }
+    .linkBox{
+      flex:.5;
     }
   }
 }

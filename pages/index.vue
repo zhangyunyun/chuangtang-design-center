@@ -2,7 +2,9 @@
   <div>
     <HeaderGuide></HeaderGuide>
     <div class="main">
-      内容
+      <div>
+        <img src="" alt="">
+      </div>
     </div>
   </div>
 </template>
