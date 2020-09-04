@@ -16,24 +16,49 @@ export default {
   head: {
     title: process.env.npm_package_name || '',
     meta: [
+<<<<<<< HEAD
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' },
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+=======
+      {
+        charset: 'utf-8'
+      },
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1'
+      },
+      {
+        hid: 'description',
+        name: 'description',
+        content: process.env.npm_package_description || ''
+      }
+>>>>>>> 2be095ca808da835372c010009356a80e72c140d
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href: '/assets/css/reset.css'}
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
+      {
+        rel: 'stylesheet',
+        href: '/css/reset.css'
+      }
     ],
     script: [
-      { src: '/js/flexible.js', type: 'text/javascript', charset: 'utf-8'}
+      {
+        type: 'text/javascript',
+        charset: 'utf-8',
+        src: '/js/flexible.js'
+      }
     ]
   },
   /*
   ** Global CSS
   */
   css: [
-    'ant-design-vue/dist/antd.css',
-    '@/assets/css/reset.css'
+    'ant-design-vue/dist/antd.css'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -50,8 +75,7 @@ export default {
   /*
   ** Nuxt.js dev-modules
   */
-  buildModules: [
-  ],
+  buildModules: [],
   /*
   ** Nuxt.js modules
   */
@@ -75,7 +99,7 @@ export default {
       })
     ],
   },
-  router:{
+  router: {
     //在每页渲染前运行 middleware/middleware.js 中间件的逻辑
     //middleware:'middleware'
   }

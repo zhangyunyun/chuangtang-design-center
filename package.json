@@ -12,18 +12,25 @@
     "@nuxtjs/axios": "^5.12.0",
     "ant-design-vue": "^1.6.4",
     "css-loader": "^4.2.2",
-    "node-sass": "^4.14.1",
     "nuxt": "^2.14.0",
     "postcss-loader": "^3.0.0",
     "postcss-px2rem": "^0.3.0",
-    "sass-loader": "^10.0.1",
-    "style-loader": "^1.2.1"
+    "style-loader": "^1.2.1",
+    "swiper": "^6.1.3",
+    "vue-awesome-swiper": "^4.1.1"
   },
+<<<<<<< HEAD
   "devDependencies": {},
   "config": {
     "nuxt": {
       "host": "0.0.0.0",
       "port": 3000
     }
+=======
+  "devDependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^10.0.2",
+    "scss-loader": "0.0.1"
+>>>>>>> 2be095ca808da835372c010009356a80e72c140d
   }
 }

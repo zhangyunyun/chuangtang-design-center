@@ -14,9 +14,12 @@
 </template>
 
 <style>
+<<<<<<< HEAD
 * {
   padding: 0;
   margin: 0
 }
 html {font-size: 100px;}
+=======
+>>>>>>> 2be095ca808da835372c010009356a80e72c140d
 </style>
