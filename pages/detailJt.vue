@@ -2,7 +2,7 @@
  * @Author: Zhanglx
  * @Date: 2020-09-03 10:22:08
  * @LastEditors: Zhanglx
- * @LastEditTime: 2020-09-03 16:34:07
+ * @LastEditTime: 2020-09-04 14:59:23
  * @FilePath: \chuangtang-design-center\pages\detailJt.vue
  * @Description: 详情-捷途
 -->
@@ -13,6 +13,12 @@
       <a-col :span="25">
         <div class="banner">
           <img src="../assets/images/dw/img_01.png" alt="">
+          <div class="banner__text">
+            <div class="banner__title">奇瑞捷途<br>新零售行业和汽车领域的灭花</div>
+            <div class="banner__content">
+              <span>平台工具</span><i>|</i><span>交通出行</span>
+            </div>
+          </div>
         </div>
       </a-col>
     </a-row>
@@ -24,39 +30,39 @@
           <div class="detail__info">{{item.info}}</div>
           <div class="detail__content" v-if="index == 0">
             <a-row>
-              <a-col :span="15">
-                <img src="../assets/images/dw/img_02.png" alt="">
+              <a-col :span="15" style="padding-right:0.4rem;">
+                <img src="../assets/images/jt/img_01.png" alt="">
               </a-col>
               <a-col :span="9">
-                <img src="../assets/images/dw/img_03.png" alt="">
+                <img src="../assets/images/jt/img_02.png" alt="">
               </a-col>
             </a-row>
           </div>
           <div class="detail__content" v-if="index == 1">
             <a-row>
               <a-col :span="24">
-                <img src="../assets/images/dw/img_04.png" alt="">
+                <img src="../assets/images/jt/img_03.png" alt="">
               </a-col>
             </a-row>
           </div>
           <div class="detail__content" v-if="index == 2">
             <a-row>
               <a-col :span="24">
-                <img src="../assets/images/dw/img_05.png" alt="">
+                <img src="../assets/images/jt/img_04.png" alt="">
               </a-col>
             </a-row>
           </div>
           <div class="detail__content" v-if="index == 3">
             <a-row>
               <a-col :span="24">
-                <img src="../assets/images/dw/img_06.png" alt="">
+                <img src="../assets/images/jt/img_05.png" alt="">
               </a-col>
             </a-row>
           </div>
           <div class="detail__content" v-if="index == 4">
             <a-row>
               <a-col :span="24">
-                <img src="../assets/images/dw/img_07.png" alt="">
+                <img src="../assets/images/jt/img_06.png" alt="">
               </a-col>
             </a-row>
           </div>
@@ -148,8 +154,43 @@ export default {
 
 <style scoped lang="scss">
 .banner {
+  color: #fff;
+  position: relative;
+  &__text{
+    position: absolute;
+    top: 380px;
+    left:350px;
+  }
+  &__title{
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+  &__subtitle{
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
   img{
     width: 100%;
+  }
+}
+@media only screen and (max-width: 976px) {
+  .banner {
+    &__text{
+      position: absolute;
+      top: 40px;
+      left: 57px;
+    }
+    &__title{
+      font-size: 40px;
+      margin-bottom: 40px;
+    }
+    &__subtitle{
+      font-size: 30px;
+      margin-bottom: 30px;
+    }
+    img{
+      width: 100%;
+    }
   }
 }
 

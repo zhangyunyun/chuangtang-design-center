@@ -2,7 +2,7 @@
  * @Author: Zhanglx
  * @Date: 2020-09-03 10:22:08
  * @LastEditors: Zhanglx
- * @LastEditTime: 2020-09-03 16:27:14
+ * @LastEditTime: 2020-09-04 14:25:30
  * @FilePath: \chuangtang-design-center\pages\detailDw.vue
  * @Description:
 -->
@@ -13,6 +13,12 @@
       <a-col :span="25">
         <div class="banner">
           <img src="../assets/images/dw/img_01.png" alt="">
+          <div class="banner__text">
+            <div class="banner__title">国家电网华东分区<br>新能源可视化，让数据更加直接</div>
+            <div class="banner__content">
+              <span>平台工具</span><i>|</i><span>新能源数据可视化</span>
+            </div>
+          </div>
         </div>
       </a-col>
     </a-row>
@@ -152,6 +158,21 @@ export default {
 
 <style scoped lang="scss">
 .banner {
+  color: #fff;
+  position: relative;
+  &__text{
+    position: absolute;
+    top: 380px;
+    left:350px;
+  }
+  &__title{
+    font-size: 60px;
+    margin-bottom: 60px;
+  }
+  &__subtitle{
+    font-size: 40px;
+    margin-bottom: 60px;
+  }
   img{
     width: 100%;
   }
