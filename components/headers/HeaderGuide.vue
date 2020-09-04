@@ -2,7 +2,7 @@
   <div class="headerBox">
     <div class="header">
       <div class="logoBox">
-        <img src="@/assets/images/logo.jpg" alt="">
+        <img src="@/assets/images/logo.png" alt="">
       </div>
       <div class="addressBox">
         <img src="@/assets/images/address.png" alt="">
@@ -11,9 +11,9 @@
       <ul class="navBox">
         <li v-for="(nav, index) in navList"
             :key="index"
-            :class="{current:navIndex==index}"
+            :class="{ current:navIndex==index }"
             v-on:click="changeCurrent(index)">
-          <a href="#">{{nav}}</a>
+          <a href="#">{{ nav.name }}</a>
         </li>
       </ul>
       <div class="linkBox">
@@ -29,7 +29,32 @@
     data(){
         return{
           navIndex:0,
-          navList:['首页','小程序','公众号','平台工具','网站','APP']
+          navList:[
+            {
+              'name':'首页',
+              'linkUrl':''
+            },
+            {
+              'name':'小程序',
+              'linkUrl':''
+            },
+            {
+              'name':'公众号',
+              'linkUrl':''
+            },
+            {
+              'name':'平台工具',
+              'linkUrl':''
+            },
+            {
+              'name':'网站',
+              'linkUrl':''
+            },
+            {
+              'name':'APP',
+              'linkUrl':''
+            }
+          ]
         }
     },
     methods:{
@@ -43,7 +68,6 @@
 <style type="text/scss" lang="scss" scoped>
 .headerBox{
   position: fixed;
-  padding:.25rem;
   left:0;
   right:0;
   top:0;
@@ -53,8 +77,9 @@
     align-content: center;
     font-size:.28rem;
     color:#fff;
-    height:.8rem;
-    line-height:.8rem;
+    height: 1.3rem;
+    line-height: .85rem;
+    padding:.25rem;
     a{
       color:#fff;
     }
@@ -62,6 +87,10 @@
     .logoBox{
       flex:.3;
       text-align:left;
+      img{
+        display: block;
+        width:100%;
+      }
     }
     .addressBox{
       flex:.2;
