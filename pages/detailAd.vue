@@ -2,7 +2,7 @@
  * @Author: Zhanglx
  * @Date: 2020-09-03 10:22:08
  * @LastEditors: Zhanglx
- * @LastEditTime: 2020-09-04 16:37:19
+ * @LastEditTime: 2020-09-04 17:49:43
  * @FilePath: \chuangtang-design-center\pages\detailAd.vue
  * @Description:
 -->
@@ -122,35 +122,16 @@
       </a-col>
       <a-col :lg="4" :xs="2"></a-col>
     </a-row>
-    <a-row class="swiper" :style="{backgroundImage: 'url(' + swiperList[current] + ')', backgroundSize:'contain'}">
-      <a-col :span="4"></a-col>
-      <a-col :span="16" >
-        <div class="swiper__title">其他案例</div>
-        <a-carousel arrows autoplay :afterChange='afterChange'>
-          <div
-            slot="prevArrow"
-            slot-scope="props"
-            class="custom-slick-arrow"
-            style="left: 10px;zIndex: 1"
-          >
-            <a-icon type="left-circle" />
-          </div>
-          <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 10px">
-            <a-icon type="right-circle" />
-          </div>
-          <div v-for="(item, index) in swiperList" :key="index"><img src="../assets/images/dw/img_08.png" alt=""></div>
-        </a-carousel>
-      </a-col>
-      <a-col :span="4"></a-col>
-    </a-row>
+    <MySwiper />
     <ContactUs />
   </div>
 </template>
 <script type="text/ecmascript-6">
 import ContactUs from '@/components/ContactUs'
+import MySwiper from '@/components/MySwiper'
 export default {
   components:{
-    ContactUs
+    ContactUs,MySwiper
   },
   data() {
     return {
@@ -176,30 +157,14 @@ export default {
           info:"创堂在拿到客户原有的数据后，对数据进行了重新的分类、整理，并充分结合企业的业务需求与我们之前各种信息的数据和分析结果，建立数据的视觉额层册，帮助用户快速定体最核心的属性和指标。",
         },
       ],
-      swiperList:[
-        '../assets/images/dw/img_08.png',
-        '../assets/images/dw/img_08.png',
-        '../assets/images/dw/img_08.png',
-        '../assets/images/dw/img_08.png',
-        '../assets/images/dw/img_08.png',
-      ],
-      current:0,
+
     };
   },
   methods:{
     onChange(a, b, c) {
       console.log(a, b, c);
-    },
-    afterChange(current){
-      console.log(current);
     }
   },
-  computed: {
-    currentImg() {
-      return 'background:url('+ require(this.swiperList[this.current]) +')'
-    }
-  },
-  components: {},
 };
 </script>
 
@@ -212,8 +177,6 @@ export default {
     margin: 0 auto;
   }
 }
-
-
 .detail {
   text-align: center;
   img{
@@ -266,20 +229,7 @@ export default {
     }
   }
 }
-.swiper{
-  background: rgba(0,0,0,.5);
-  padding-bottom: 40px;
-  margin-top: 35px;
-  &__title{
-    text-align: center;
-    font-size: 38px;
-    font-weight: bold;
-    padding-top: 40px;
-    line-height: 1;
-    padding-bottom: 40px;
-    color: #fff;
-  }
-}
+
 /* For demo */
 .ant-carousel ::v-deep .slick-slide {
   padding: 0 80px;

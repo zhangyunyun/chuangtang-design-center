@@ -5,16 +5,22 @@
   "LazyContactUs": {
     "description": "Auto imported from components/ContactUs.vue"
   },
-  "OnlineGuide": {
-    "description": "Auto imported from components/onlines/OnlineGuide.vue"
+  "MySwiper": {
+    "description": "Auto imported from components/MySwiper.vue"
   },
-  "LazyOnlineGuide": {
-    "description": "Auto imported from components/onlines/OnlineGuide.vue"
+  "LazyMySwiper": {
+    "description": "Auto imported from components/MySwiper.vue"
   },
   "HeaderGuide": {
     "description": "Auto imported from components/headers/HeaderGuide.vue"
   },
   "LazyHeaderGuide": {
     "description": "Auto imported from components/headers/HeaderGuide.vue"
+  },
+  "OnlineGuide": {
+    "description": "Auto imported from components/onlines/OnlineGuide.vue"
+  },
+  "LazyOnlineGuide": {
+    "description": "Auto imported from components/onlines/OnlineGuide.vue"
   }
 }

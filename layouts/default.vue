@@ -2,7 +2,7 @@
  * @Author: Zhanglx
  * @Date: 2020-09-03 10:19:52
  * @LastEditors: Zhanglx
- * @LastEditTime: 2020-09-03 11:41:17
+ * @LastEditTime: 2020-09-04 17:30:10
  * @FilePath: \chuangtang-design-center\layouts\default.vue
  * @Description:
 -->
@@ -13,5 +13,10 @@
   </div>
 </template>
 
-<style>
-</style>
+<script>
+export default {
+  mounted() {
+    console.log(this.$nuxt.$route.path)
+  },
+}
+</script>

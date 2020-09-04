@@ -2,7 +2,7 @@
  * @Author: Zhanglx
  * @Date: 2020-09-03 10:22:08
  * @LastEditors: Zhanglx
- * @LastEditTime: 2020-09-04 17:17:07
+ * @LastEditTime: 2020-09-04 18:18:10
  * @FilePath: \chuangtang-design-center\pages\detailDw.vue
  * @Description:
 -->
@@ -71,36 +71,17 @@
       </a-col>
       <a-col :lg="4" :xs="2"></a-col>
     </a-row>
-    <a-row class="swiper" :style="{backgroundImage: 'url(' + swiperList[current] + ')', backgroundSize:'contain'}">
-      <a-col :span="4"></a-col>
-      <a-col :span="16" >
-        <div class="swiper__title">其他案例</div>
-        <a-carousel arrows autoplay :afterChange='afterChange'>
-          <div
-            slot="prevArrow"
-            slot-scope="props"
-            class="custom-slick-arrow"
-            style="left: 10px;zIndex: 1"
-          >
-            <a-icon type="left-circle" />
-          </div>
-          <div slot="nextArrow" slot-scope="props" class="custom-slick-arrow" style="right: 10px">
-            <a-icon type="right-circle" />
-          </div>
-          <div v-for="(item, index) in swiperList" :key="index"><img src="../assets/images/dw/img_08.png" alt=""></div>
-        </a-carousel>
-      </a-col>
-      <a-col :span="4"></a-col>
-    </a-row>
+    <MySwiper />
     <ContactUs />
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import MySwiper from '@/components/MySwiper'
 import ContactUs from '@/components/ContactUs'
 export default {
   components:{
-    ContactUs
+    ContactUs,MySwiper
   },
   data() {
     return {
@@ -134,31 +115,9 @@ export default {
           info:"对于能源的可视化，创堂还是有一手的,无论在交互逻辑上的体现，还是在视觉上直观的体现，数据上的突出显示，可以第一时间观测到当前数据如何，醒目的颜色，几何图可以直观也辅助数据的直观性。所以无论是视觉还是交互，创堂的团队一向遵守的是信息的直观表达，视觉辅助信息的表达，而不添加其他杂质。",
           img: [""],
         },
-      ],
-      swiperList:[
-        '../assets/images/dw/img_08.png',
-        '../assets/images/dw/img_08.png',
-        '../assets/images/dw/img_08.png',
-        '../assets/images/dw/img_08.png',
-        '../assets/images/dw/img_08.png',
-      ],
-      current:0,
+      ]
     };
-  },
-  methods:{
-    onChange(a, b, c) {
-      console.log(a, b, c);
-    },
-    afterChange(current){
-      console.log(current);
-    }
-  },
-  computed: {
-    currentImg() {
-      return 'background:url('+ require(this.swiperList[this.current]) +')'
-    }
-  },
-  components: {},
+  }
 };
 </script>
 
@@ -182,46 +141,5 @@ export default {
       max-width: 100%;
     }
   }
-}
-.swiper{
-  background: rgba(0,0,0,.5);
-  padding-bottom: 40px;
-  margin-top: 35px;
-  &__title{
-    text-align: center;
-    font-size: 38px;
-    font-weight: bold;
-    padding-top: 40px;
-    line-height: 1;
-    padding-bottom: 40px;
-    color: #fff;
-  }
-}
-/* For demo */
-.ant-carousel ::v-deep .slick-slide {
-  padding: 0 80px;
-  img{
-    width: 100%;
-    display: block;
-  }
-}
-
-.ant-carousel ::v-deep .custom-slick-arrow {
-  width: 40px;
-  height: 40px;
-  font-size: 40px;
-  color: #fff;
-  // background-color: rgba(31, 45, 61, 0.11);
-  opacity: 0.5;
-}
-.ant-carousel ::v-deep .custom-slick-arrow:before {
-  display: none;
-}
-.ant-carousel ::v-deep .custom-slick-arrow:hover {
-  opacity: 0.8;
-}
-
-.ant-carousel ::v-deep .slick-slide h3 {
-  color: #fff;
 }
 </style>
