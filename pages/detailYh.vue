@@ -2,7 +2,7 @@
  * @Author: Zhanglx
  * @Date: 2020-09-03 10:22:08
  * @LastEditors: Zhanglx
- * @LastEditTime: 2020-09-04 14:27:02
+ * @LastEditTime: 2020-09-04 16:26:46
  * @FilePath: \chuangtang-design-center\pages\detailYh.vue
  * @Description:
 -->
@@ -141,11 +141,16 @@
       </a-col>
       <a-col :span="4"></a-col>
     </a-row>
+    <ContactUs />
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import ContactUs from '@/components/ContactUs'
 export default {
+  components:{
+    ContactUs
+  },
   data() {
     return {
       list: [
@@ -204,26 +209,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.banner {
-  color: #fff;
-  position: relative;
-  &__text{
-    position: absolute;
-    top: 380px;
-    left:350px;
-  }
-  &__title{
-    font-size: 60px;
-    margin-bottom: 60px;
-  }
-  &__subtitle{
-    font-size: 40px;
-    margin-bottom: 60px;
-  }
-  img{
-    width: 100%;
-  }
-}
+
 
 .detail {
   text-align: center;

@@ -1,0 +1,20 @@
+{
+  "ContactUs": {
+    "description": "Auto imported from components/ContactUs.vue"
+  },
+  "LazyContactUs": {
+    "description": "Auto imported from components/ContactUs.vue"
+  },
+  "OnlineGuide": {
+    "description": "Auto imported from components/onlines/OnlineGuide.vue"
+  },
+  "LazyOnlineGuide": {
+    "description": "Auto imported from components/onlines/OnlineGuide.vue"
+  },
+  "HeaderGuide": {
+    "description": "Auto imported from components/headers/HeaderGuide.vue"
+  },
+  "LazyHeaderGuide": {
+    "description": "Auto imported from components/headers/HeaderGuide.vue"
+  }
+}

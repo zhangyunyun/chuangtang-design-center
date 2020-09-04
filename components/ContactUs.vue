@@ -1,5 +1,6 @@
 <template>
   <div>
+    <OnlineGuide />
     <a-row>
       <a-col :lg="8" :xs="2"></a-col>
       <a-col :lg="8" :xs="20">
@@ -28,7 +29,11 @@
 </template>
 
 <script>
+import OnlineGuide from './onlines/OnlineGuide'
 export default {
+  components:{
+    OnlineGuide
+  },
   data() {
     return {
       ruleForm: {

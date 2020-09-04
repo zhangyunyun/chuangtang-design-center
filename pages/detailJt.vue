@@ -2,7 +2,7 @@
  * @Author: Zhanglx
  * @Date: 2020-09-03 10:22:08
  * @LastEditors: Zhanglx
- * @LastEditTime: 2020-09-04 14:59:23
+ * @LastEditTime: 2020-09-04 17:23:07
  * @FilePath: \chuangtang-design-center\pages\detailJt.vue
  * @Description: 详情-捷途
 -->
@@ -91,11 +91,19 @@
       </a-col>
       <a-col :span="4"></a-col>
     </a-row>
+    <ContactUs />
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import ContactUs from '@/components/ContactUs'
 export default {
+  components:{
+    ContactUs
+  },
+  mounted() {
+
+  },
   data() {
     return {
       list: [
@@ -153,46 +161,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.banner {
-  color: #fff;
-  position: relative;
-  &__text{
-    position: absolute;
-    top: 380px;
-    left:350px;
-  }
-  &__title{
-    font-size: 60px;
-    margin-bottom: 60px;
-  }
-  &__subtitle{
-    font-size: 40px;
-    margin-bottom: 60px;
-  }
-  img{
-    width: 100%;
-  }
-}
-@media only screen and (max-width: 976px) {
-  .banner {
-    &__text{
-      position: absolute;
-      top: 40px;
-      left: 57px;
-    }
-    &__title{
-      font-size: 40px;
-      margin-bottom: 40px;
-    }
-    &__subtitle{
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
-    img{
-      width: 100%;
-    }
-  }
-}
 
 .detail {
   text-align: center;

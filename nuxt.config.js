@@ -16,11 +16,6 @@ export default {
   head: {
     title: process.env.npm_package_name || '',
     meta: [
-<<<<<<< HEAD
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
-=======
       {
         charset: 'utf-8'
       },
@@ -33,7 +28,6 @@ export default {
         name: 'description',
         content: process.env.npm_package_description || ''
       }
->>>>>>> 2be095ca808da835372c010009356a80e72c140d
     ],
     link: [
       {
@@ -58,7 +52,8 @@ export default {
   ** Global CSS
   */
   css: [
-    'ant-design-vue/dist/antd.css'
+    'ant-design-vue/dist/antd.css',
+    { src: '~/static/css/common.scss', lang: 'scss' }
   ],
   /*
   ** Plugins to load before mounting the App

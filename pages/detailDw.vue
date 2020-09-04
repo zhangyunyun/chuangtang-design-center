@@ -2,7 +2,7 @@
  * @Author: Zhanglx
  * @Date: 2020-09-03 10:22:08
  * @LastEditors: Zhanglx
- * @LastEditTime: 2020-09-04 14:25:30
+ * @LastEditTime: 2020-09-04 17:17:07
  * @FilePath: \chuangtang-design-center\pages\detailDw.vue
  * @Description:
 -->
@@ -15,6 +15,7 @@
           <img src="../assets/images/dw/img_01.png" alt="">
           <div class="banner__text">
             <div class="banner__title">国家电网华东分区<br>新能源可视化，让数据更加直接</div>
+            <div class="banner__subtitle"></div>
             <div class="banner__content">
               <span>平台工具</span><i>|</i><span>新能源数据可视化</span>
             </div>
@@ -91,11 +92,16 @@
       </a-col>
       <a-col :span="4"></a-col>
     </a-row>
+    <ContactUs />
   </div>
 </template>
 
 <script type="text/ecmascript-6">
+import ContactUs from '@/components/ContactUs'
 export default {
+  components:{
+    ContactUs
+  },
   data() {
     return {
       list: [
@@ -157,26 +163,6 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.banner {
-  color: #fff;
-  position: relative;
-  &__text{
-    position: absolute;
-    top: 380px;
-    left:350px;
-  }
-  &__title{
-    font-size: 60px;
-    margin-bottom: 60px;
-  }
-  &__subtitle{
-    font-size: 40px;
-    margin-bottom: 60px;
-  }
-  img{
-    width: 100%;
-  }
-}
 
 .detail {
   text-align: center;
