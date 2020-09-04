@@ -26,31 +26,38 @@ export const routerOptions = {
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior,
 
-  routes: [{
-    path: "/about",
-    component: _424f1808,
-    name: "about"
-  }, {
-    path: "/detailAd",
-    component: _75b4e9a9,
-    name: "detailAd"
-  }, {
-    path: "/detailDw",
-    component: _7bdf3219,
-    name: "detailDw"
-  }, {
-    path: "/detailJt",
-    component: _f41c0160,
-    name: "detailJt"
-  }, {
-    path: "/detailYh",
-    component: _c23cd2d6,
-    name: "detailYh"
-  }, {
-    path: "/",
-    component: _6206f2cd,
-    name: "index"
-  }],
+  routes: [
+    {
+      path: "/about",
+      component: _424f1808,
+      name: "about"
+    },
+    {
+      path: "/detailAd",
+      component: _75b4e9a9,
+      name: "detailAd"
+    },
+    {
+      path: "/detailDw",
+      component: _7bdf3219,
+      name: "detailDw"
+    },
+    {
+      path: "/detailJt",
+      component: _f41c0160,
+      name: "detailJt"
+    },
+    {
+      path: "/detailYh",
+      component: _c23cd2d6,
+      name: "detailYh"
+    },
+    {
+      path: "/",
+      component: _6206f2cd,
+      name: "index"
+    }
+  ],
 
   fallback: false
 }
