@@ -59,18 +59,24 @@
     </div>
     <div class="sideBox sideProduct">
       <div class="sideCont">
-        <ul>
+        <ul class="productTab">
           <li>
-            <h3>3000 <i></i></h3>
-            <p>平台设计师</p>
+            <div class="proInner">
+              <h3>3000 <i>+</i></h3>
+              <p>平台设计师</p>
+            </div>
           </li>
           <li>
-            <h3>4</h3>
-            <p>成立年限</p>
+            <div class="proInner">
+              <h3>4</h3>
+              <p>成立年限</p>
+            </div>
           </li>
           <li>
-            <h3>4</h3>
-            <p>成立年限</p>
+            <div class="proInner">
+              <h3>80 <i>+</i></h3>
+              <p>经历项目</p>
+            </div>
           </li>
         </ul>
       </div>
@@ -177,6 +183,49 @@ export default {
         }
         .gRt{
           justify-content: flex-start;
+        }
+      }
+    }
+  }
+}
+
+.sideProduct{
+  .productTab{
+    display: flex;
+    li{
+      flex:1 1 33.333%;
+      align-items: center;
+      justify-content: center;
+      .proInner{
+        text-align: center;
+        h3 {
+          position: relative;
+          color: #e5c68f;
+          font-size:1rem;
+          height:1.5rem;
+          -webkit-text-fill-color:transparent;
+          -webkit-box-decoration-break:clone;
+          box-decoration-break:clone;
+          background-size:100% 100%;
+          -webkit-background-clip:text;
+          background-clip:text;
+          background-image:-webkit-gradient(linear,right top, left top,from(#e5c68f),to(#b7986c));
+          background-image:linear-gradient(270deg,#e5c68f,#b7986c);
+          margin-bottom:0;
+        }
+        i{
+          position: absolute;
+          right:-.15rem;
+          top:-.15rem;
+          width:.6rem;
+          height:.6rem;
+          display:inline-block;
+          font-size:4rem;
+        }
+        p {
+          color: #999;
+          font-size:.28rem;
+          margin-bottom:0;
         }
       }
     }
