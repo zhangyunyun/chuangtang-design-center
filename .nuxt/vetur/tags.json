@@ -11,6 +11,18 @@
   "LazyMySwiper": {
     "description": "Auto imported from components/MySwiper.vue"
   },
+  "BannerGuide": {
+    "description": "Auto imported from components/banners/BannerGuide.vue"
+  },
+  "LazyBannerGuide": {
+    "description": "Auto imported from components/banners/BannerGuide.vue"
+  },
+  "GoodGuide": {
+    "description": "Auto imported from components/goods/GoodGuide.vue"
+  },
+  "LazyGoodGuide": {
+    "description": "Auto imported from components/goods/GoodGuide.vue"
+  },
   "HeaderGuide": {
     "description": "Auto imported from components/headers/HeaderGuide.vue"
   },

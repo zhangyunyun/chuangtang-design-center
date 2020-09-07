@@ -1,85 +1,48 @@
-<template>
-  <div class="about">
+./.<template>
+  <div class="main">
     <HeaderGuide></HeaderGuide>
-    <div class="sideBox sideTheme">
-      <img src="@/assets/images/home/home-banner.jpg" alt="">
-      <div class="sideCont">
-        <h1>[CT.D]创堂设计(上海)</h1>
-        <p>用科学的设计体系、</p>
-        <p>为客户带来更大的商业价值！</p>
-      </div>
-    </div>
-    <div class="sideBox sideGood">
-      <div class="sideCont">
-        <div class="sideExplain">
-          <p>CT.D(Chuangtang Design Center) 全称为创堂设计中心，创堂设计中心隶属于上海创堂网络科技有限公司。
-            CT.D致力于企业用户的互联网产品体验提升以及设计外包服务-聚焦客户的商业需求与用户需求，结合创堂设计科学、成熟、有效的方法论规避方向性错误、过滤基础性错误，为客户提供正确完整的解决方案。</p>
-        </div>
-        <div class="goodCont">
-          <ul class="goodList">
-            <li>
-              <div class="goodInner">
-                <div class="gLt">
-                  <img src="@/assets/images/home/good-1.png" alt="">
-                </div>
-                <div class="gRt">
-                  <h3>业务能力</h3>
-                  <p>奥迪用户洞察数据可视化项目，是基于终端数据汇总而形成的数据源池，我们通过对该数据池进行数据可视化处理，
-                    帮助数据使用者快速呈现市场表现、销售表现、空间时间表现。并帮助用户快速洞察、定位问题。</p>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="goodInner">
-                <div class="gRt">
-                  <h3>专业能力</h3>
-                  <p>奥迪用户洞察数据可视化项目，是基于终端数据汇总而形成的数据源池，我们通过对该数据池进行数据可视化处理，
-                    帮助数据使用者快速呈现市场表现、销售表现、空间时间表现。并帮助用户快速洞察、定位问题。</p>
-                </div>
-                <div class="gLt">
-                  <img src="@/assets/images/home/good-2.png" alt="">
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="goodInner">
-                <div class="gLt">
-                  <img src="@/assets/images/home/good-3.png" alt="">
-                </div>
-                <div class="gRt">
-                  <h3>售后服务</h3>
-                  <p>奥迪用户洞察数据可视化项目，是基于终端数据汇总而形成的数据源池，我们通过对该数据池进行数据可视化处理，
-                    帮助数据使用者快速呈现市场表现、销售表现、空间时间表现。并帮助用户快速洞察、定位问题。</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="sideBox sideProduct">
-      <div class="sideCont">
-        <ul class="productTab">
-          <li>
+    <BannerGuide></BannerGuide>
+    <!--创堂优势-->
+    <a-row class="sideGood">
+      <a-col :lg="4" :xs="2"></a-col>
+      <a-col :lg="16" :xs="20">
+        <a-row>
+          <a-col :span="24">
+            <div class="sideExplain">
+              <p>CT.D(Chuangtang Design Center) 全称为创堂设计中心，创堂设计中心隶属于上海创堂网络科技有限公司。
+                CT.D致力于企业用户的互联网产品体验提升以及设计外包服务-聚焦客户的商业需求与用户需求，结合创堂设计科学、成熟、有效的方法论规避方向性错误、过滤基础性错误，为客户提供正确完整的解决方案。</p>
+            </div>
+          </a-col>
+        </a-row>
+        <GoodGuide></GoodGuide>
+      </a-col>
+      <a-col :lg="4" :xs="2"></a-col>
+    </a-row>
+    <!--设计服务-->
+    <a-row class="sideProduct">
+      <a-col :lg="4" :xs="2"></a-col>
+      <a-col :lg="16" :xs="20">
+        <a-row class="productTab">
+          <a-col :lg="8">
             <div class="proInner">
               <h3>3000 <i>+</i></h3>
               <p>平台设计师</p>
             </div>
-          </li>
-          <li>
+          </a-col>
+          <a-col :lg="8">
             <div class="proInner">
               <h3>4</h3>
               <p>成立年限</p>
             </div>
-          </li>
-          <li>
+          </a-col>
+          <a-col :lg="8">
             <div class="proInner">
               <h3>80 <i>+</i></h3>
               <p>经历项目</p>
             </div>
-          </li>
-        </ul>
-        <div class="productShow">
+          </a-col>
+        </a-row>
+        <a-row class="productShow">
           <table class="proTab">
             <tr>
               <th>项目名称</th>
@@ -130,170 +93,99 @@
           <div class="proBtn">
             <a href="#">更多项目</a>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="sideBox sideTeam">
-      <div class="sideCont">
-        <h2 class="sideTitle">我们的团队</h2>
-        <div class="sideExplain">
-          <p>创始团队聚集了中国一线企业的设计专家、设计师，具有丰富的从业经验。他们来自阿里、腾讯、百度、小米、华为、三星、联想等。有内驱力、有自我实现懂就、有服务意识与服务精神、更哟欧服务能力与专业度。</p>
-          <p>在长期为企业服务的过程中，团队为企业创造价值的同时，也在不断的实践中，逐渐通过经验积累，放大产品与设计在企业经营中的价值</p>
-        </div>
-        <div class="teamCont">
-          <ul class="teamList">
-            <li>
-              <div class="teamInner">
-                <img src="@/assets/images/about/team-1.jpg" alt="">
-                <dl>
-                  <dt>青木</dt>
-                  <dd>集创堂资深合伙人，10年设计经验。</dd>
-                </dl>
-              </div>
-            </li>
-            <li>
-              <div class="teamInner">
-                <img src="@/assets/images/about/team-1.jpg" alt="">
-                <dl>
-                  <dt>慈思远</dt>
-                  <dd>集创堂创始人，《矩阵思维》作者</dd>
-                </dl>
-              </div>
-            </li>
-            <li>
-              <div class="teamInner">
-                <img src="@/assets/images/about/team-1.jpg" alt="">
-                <dl>
-                  <dt>米哈</dt>
-                  <dd>容资深设计师</dd>
-                </dl>
-              </div>
-            </li>
-            <li>
-              <div class="teamInner">
-                <img src="@/assets/images/about/team-1.jpg" alt="">
-                <dl>
-                  <dt>鹿姐</dt>
-                  <dd>--</dd>
-                </dl>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <OnlineGuide></OnlineGuide>
+        </a-row>
+      </a-col>
+      <a-col :lg="4" :xs="2"></a-col>
+    </a-row>
+    <!--我们的团队-->
+    <a-row class="sideTeam">
+      <a-col :lg="4" :xs="2"></a-col>
+      <a-col :lg="16" :xs="20">
+        <a-row>
+          <a-col :span="24">
+            <h2 class="sideTitle">我们的团队</h2>
+          </a-col>
+        </a-row>
+        <a-row>
+          <a-col :span="24">
+            <div class="sideExplain">
+              <p>创始团队聚集了中国一线企业的设计专家、设计师，具有丰富的从业经验。他们来自阿里、腾讯、百度、小米、华为、三星、联想等。有内驱力、有自我实现懂就、有服务意识与服务精神、更哟欧服务能力与专业度。</p>
+              <p>在长期为企业服务的过程中，团队为企业创造价值的同时，也在不断的实践中，逐渐通过经验积累，放大产品与设计在企业经营中的价值</p>
+            </div>
+          </a-col>
+        </a-row>
+        <a-row class="teamList">
+          <a-col :lg="6">
+            <div class="teamInner">
+              <img src="@/assets/images/about/team-1.jpg" alt="">
+              <dl>
+                <dt>青木</dt>
+                <dd>集创堂资深合伙人，10年设计经验。</dd>
+              </dl>
+            </div>
+          </a-col>
+          <a-col :lg="6">
+            <div class="teamInner">
+              <img src="@/assets/images/about/team-1.jpg" alt="">
+              <dl>
+                <dt>慈思远</dt>
+                <dd>集创堂创始人，《矩阵思维》作者</dd>
+              </dl>
+            </div>
+          </a-col>
+          <a-col :lg="6">
+            <div class="teamInner">
+              <img src="@/assets/images/about/team-1.jpg" alt="">
+              <dl>
+                <dt>米哈</dt>
+                <dd>容资深设计师</dd>
+              </dl>
+            </div>
+          </a-col>
+          <a-col :lg="6">
+            <div class="teamInner">
+              <img src="@/assets/images/about/team-1.jpg" alt="">
+              <dl>
+                <dt>鹿姐</dt>
+                <dd>--</dd>
+              </dl>
+            </div>
+          </a-col>
+        </a-row>
+      </a-col>
+      <a-col :lg="4" :xs="2"></a-col>
+    </a-row>
+    <ContactUs></ContactUs>
   </div>
 </template>
 
 <script>
 import HeaderGuide from '../components/headers/HeaderGuide'
-import OnlineGuide from '../components/onlines/OnlineGuide'
+import BannerGuide from '../components/banners/BannerGuide'
+import GoodGuide from '../components/goods/GoodGuide'
+import ContactUs from '@/components/ContactUs'
 export default {
-  name: "about",
+  name: "index",
   components:{
     HeaderGuide,
-    OnlineGuide
+    BannerGuide,
+    GoodGuide,
+    ContactUs
+  },
+  data(){
+    return{
+    }
+  },
+  methods:{
   }
 }
 </script>
 
 <style type="text/scss" lang="scss" scoped>
-.sideBox{
-  position: relative;
-  img{
-    position: relative;
-    width:100%;
-  }
-  .sideExplain{
-    line-height:1.6;
-    font-size:.28rem;
-  }
-  .sideTitle{
-    text-align: center;
-    font-weight: bold;
-    height: .8rem;
-    line-height: .8rem;
-    font-size: .45rem;
-  }
-  .sideCont{
-    width:1200px;
-    margin:0 auto;
-    position:relative;
-  }
-}
-/*banner图文本*/
-.sideTheme{
-  .sideCont{
-    position:absolute;
-    top:calc(50% - 140px);
-    left:calc(50% - 600px);
-    color:#fff;
-    text-shadow:1px 1px 3px rgba(0,0,0,.5);
-    h1{
-      font-size:.8rem;
-      color:#fff;
-      margin-bottom:.5rem;
-    }
-    p{
-      font-size:.5rem;
-      line-height:1.6;
-      margin-bottom:.15rem;
-    }
-  }
-}
-
-.sideGood{
-  padding:.6rem 0;
-  .goodCont{
-    margin-top:.6rem;
-    position:relative;
-  }
-  .goodList{
-    li{
-      .goodInner{
-        display: table;
-        table-layout: fixed;
-        width: 100%;
-        .gLt,.gRt{
-          display: table-cell;
-          position: relative;
-          vertical-align: middle;
-        }
-        .gLt{
-          img{
-            display: block;
-            width: 100%;
-          }
-        }
-        .gRt{
-          padding:.25rem;
-          h3{
-            font-size:.32rem;
-            font-weight:bold;
-          }
-          p{
-            font-size:.28rem;
-            line-height:1.6;
-          }
-        }
-      }
-      &:nth-of-type(2){
-        .gLt{
-          justify-content: flex-end;
-        }
-        .gRt{
-          justify-content: flex-start;
-        }
-      }
-    }
-  }
-}
-
 .sideProduct{
   .productTab{
     display: flex;
-    li{
+    .a-col{
       flex:1 1 33.333%;
       align-items: center;
       justify-content: center;
@@ -362,32 +254,28 @@ export default {
     }
   }
   .proBtn{
-    margin-top:.25rem;
+    margin-top:10px;
+    text-align: center;
     a{
       text-align: center;
-      border-radius: 0.666667rem;
-      border: 0.013333rem solid #cbaa77;
+      border-radius: 50px;
+      border: 1px solid #cbaa77;
       color: #cbaa77;
-      width: 2.5rem;
-      height: .65rem;
-      line-height: .65rem;
+      width: 160px;
+      height: 42px;
+      line-height:42px;
       display: block;
       margin: 0 auto;
-      font-size: .25rem;
+      font-size: 18px;
     }
   }
 }
 
 .sideTeam{
-  padding:.6rem 0;
-  .teamCont{
-    margin-top:.6rem;
-    position:relative;
-  }
   .teamList{
     display: flex;
     margin:0 -.25rem;
-    li{
+    .a-col{
       flex:1 1 25%;
       .teamInner{
         margin:.25rem;
@@ -426,5 +314,4 @@ export default {
     }
   }
 }
-
 </style>

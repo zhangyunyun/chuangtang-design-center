@@ -3,12 +3,12 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _424f1808 = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages/about" */))
-const _75b4e9a9 = () => interopDefault(import('..\\pages\\detailAd.vue' /* webpackChunkName: "pages/detailAd" */))
-const _7bdf3219 = () => interopDefault(import('..\\pages\\detailDw.vue' /* webpackChunkName: "pages/detailDw" */))
-const _f41c0160 = () => interopDefault(import('..\\pages\\detailJt.vue' /* webpackChunkName: "pages/detailJt" */))
-const _c23cd2d6 = () => interopDefault(import('..\\pages\\detailYh.vue' /* webpackChunkName: "pages/detailYh" */))
-const _6206f2cd = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
+const _095bc7e3 = () => interopDefault(import('..\\pages\\about.vue' /* webpackChunkName: "pages/about" */))
+const _131967ee = () => interopDefault(import('..\\pages\\detailAd.vue' /* webpackChunkName: "pages/detailAd" */))
+const _1943b05e = () => interopDefault(import('..\\pages\\detailDw.vue' /* webpackChunkName: "pages/detailDw" */))
+const _23567d95 = () => interopDefault(import('..\\pages\\detailJt.vue' /* webpackChunkName: "pages/detailJt" */))
+const _3c4614da = () => interopDefault(import('..\\pages\\detailYh.vue' /* webpackChunkName: "pages/detailYh" */))
+const _2913a2a8 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages/index" */))
 
 // TODO: remove in Nuxt 3
 const emptyFn = () => {}
@@ -26,38 +26,31 @@ export const routerOptions = {
   linkExactActiveClass: 'nuxt-link-exact-active',
   scrollBehavior,
 
-  routes: [
-    {
-      path: "/about",
-      component: _424f1808,
-      name: "about"
-    },
-    {
-      path: "/detailAd",
-      component: _75b4e9a9,
-      name: "detailAd"
-    },
-    {
-      path: "/detailDw",
-      component: _7bdf3219,
-      name: "detailDw"
-    },
-    {
-      path: "/detailJt",
-      component: _f41c0160,
-      name: "detailJt"
-    },
-    {
-      path: "/detailYh",
-      component: _c23cd2d6,
-      name: "detailYh"
-    },
-    {
-      path: "/",
-      component: _6206f2cd,
-      name: "index"
-    }
-  ],
+  routes: [{
+    path: "/about",
+    component: _095bc7e3,
+    name: "about"
+  }, {
+    path: "/detailAd",
+    component: _131967ee,
+    name: "detailAd"
+  }, {
+    path: "/detailDw",
+    component: _1943b05e,
+    name: "detailDw"
+  }, {
+    path: "/detailJt",
+    component: _23567d95,
+    name: "detailJt"
+  }, {
+    path: "/detailYh",
+    component: _3c4614da,
+    name: "detailYh"
+  }, {
+    path: "/",
+    component: _2913a2a8,
+    name: "index"
+  }],
 
   fallback: false
 }

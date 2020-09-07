@@ -2,43 +2,43 @@
   {
     "name": "about",
     "path": "/about",
-    "component": "D:\\\\Users\\\\Zhanglx\\\\Desktop\\\\chuangtang-design-center\\\\pages\\\\about.vue",
+    "component": "E:\\\\外接\\\\laj\\\\chuangtang-design-center\\\\pages\\\\about.vue",
     "chunkName": "pages/about",
-    "_name": "_424f1808"
+    "_name": "_095bc7e3"
   },
   {
     "name": "detailAd",
     "path": "/detailAd",
-    "component": "D:\\\\Users\\\\Zhanglx\\\\Desktop\\\\chuangtang-design-center\\\\pages\\\\detailAd.vue",
+    "component": "E:\\\\外接\\\\laj\\\\chuangtang-design-center\\\\pages\\\\detailAd.vue",
     "chunkName": "pages/detailAd",
-    "_name": "_75b4e9a9"
+    "_name": "_131967ee"
   },
   {
     "name": "detailDw",
     "path": "/detailDw",
-    "component": "D:\\\\Users\\\\Zhanglx\\\\Desktop\\\\chuangtang-design-center\\\\pages\\\\detailDw.vue",
+    "component": "E:\\\\外接\\\\laj\\\\chuangtang-design-center\\\\pages\\\\detailDw.vue",
     "chunkName": "pages/detailDw",
-    "_name": "_7bdf3219"
+    "_name": "_1943b05e"
   },
   {
     "name": "detailJt",
     "path": "/detailJt",
-    "component": "D:\\\\Users\\\\Zhanglx\\\\Desktop\\\\chuangtang-design-center\\\\pages\\\\detailJt.vue",
+    "component": "E:\\\\外接\\\\laj\\\\chuangtang-design-center\\\\pages\\\\detailJt.vue",
     "chunkName": "pages/detailJt",
-    "_name": "_f41c0160"
+    "_name": "_23567d95"
   },
   {
     "name": "detailYh",
     "path": "/detailYh",
-    "component": "D:\\\\Users\\\\Zhanglx\\\\Desktop\\\\chuangtang-design-center\\\\pages\\\\detailYh.vue",
+    "component": "E:\\\\外接\\\\laj\\\\chuangtang-design-center\\\\pages\\\\detailYh.vue",
     "chunkName": "pages/detailYh",
-    "_name": "_c23cd2d6"
+    "_name": "_3c4614da"
   },
   {
     "name": "index",
     "path": "/",
-    "component": "D:\\\\Users\\\\Zhanglx\\\\Desktop\\\\chuangtang-design-center\\\\pages\\\\index.vue",
+    "component": "E:\\\\外接\\\\laj\\\\chuangtang-design-center\\\\pages\\\\index.vue",
     "chunkName": "pages/index",
-    "_name": "_6206f2cd"
+    "_name": "_2913a2a8"
   }
 ]

@@ -8,6 +8,7 @@
 -->
 <template>
   <div class="page">
+    <HeaderGuide></HeaderGuide>
     <!-- banner -->
     <a-row>
       <a-col :span="25">
@@ -126,46 +127,48 @@
     <ContactUs />
   </div>
 </template>
-<script type="text/ecmascript-6">
-import ContactUs from '@/components/ContactUs'
-import MySwiper from '@/components/MySwiper'
-export default {
-  components:{
-    ContactUs,MySwiper
-  },
-  data() {
-    return {
-      list: [
-        {
-          title: "项目背景",
-          info:"",
-        },
-        {
-          title: "系统的项目规划",
-          info:"在项目开始，我们首先进行了系统的项目流程规划，合理安排项目进度，有效使用项目资源，确保项目能够按期完成。卡住每个关键节点的时间，进行审核、汇报。推动项目的高速运行。",
-        },
-        {
-          title: "快速理解需求，精准制定策略",
-          info:"我们在沟通中发现甲方需要的是产品的结构与信息逻辑的组织上能够贴近用户的心理模型，进行无继的人与产品对接。在获得了足够支持与抉择信息后，我哦们开始组织设计方案的初步概念框架。设计方案-击即中，为后续的产品结构劈开设计赢得了时间。",
-        },
-        {
-          title: "信息输入",
-          info:"创堂历时三周，进行了大量的调研、探索与尝试。搜集了大量行业相关的数据、报告，充分了解了项目背景，并对主要几家竞品进行了详尽的竞品分析，让我们在之后的蛇鳄季缓解每一步都有据可依。",
-        },
-        {
-          title: "数据可视化处理",
-          info:"创堂在拿到客户原有的数据后，对数据进行了重新的分类、整理，并充分结合企业的业务需求与我们之前各种信息的数据和分析结果，建立数据的视觉额层册，帮助用户快速定体最核心的属性和指标。",
-        },
-      ],
-
-    };
-  },
-  methods:{
-    onChange(a, b, c) {
-      console.log(a, b, c);
+<script>
+  import HeaderGuide from '../components/headers/HeaderGuide'
+  import ContactUs from '@/components/ContactUs'
+  import MySwiper from '@/components/MySwiper'
+  export default {
+    components:{
+      HeaderGuide,
+      ContactUs,
+      MySwiper
+    },
+    data() {
+      return {
+        list: [
+          {
+            title: "项目背景",
+            info:"",
+          },
+          {
+            title: "系统的项目规划",
+            info:"在项目开始，我们首先进行了系统的项目流程规划，合理安排项目进度，有效使用项目资源，确保项目能够按期完成。卡住每个关键节点的时间，进行审核、汇报。推动项目的高速运行。",
+          },
+          {
+            title: "快速理解需求，精准制定策略",
+            info:"我们在沟通中发现甲方需要的是产品的结构与信息逻辑的组织上能够贴近用户的心理模型，进行无继的人与产品对接。在获得了足够支持与抉择信息后，我哦们开始组织设计方案的初步概念框架。设计方案-击即中，为后续的产品结构劈开设计赢得了时间。",
+          },
+          {
+            title: "信息输入",
+            info:"创堂历时三周，进行了大量的调研、探索与尝试。搜集了大量行业相关的数据、报告，充分了解了项目背景，并对主要几家竞品进行了详尽的竞品分析，让我们在之后的蛇鳄季缓解每一步都有据可依。",
+          },
+          {
+            title: "数据可视化处理",
+            info:"创堂在拿到客户原有的数据后，对数据进行了重新的分类、整理，并充分结合企业的业务需求与我们之前各种信息的数据和分析结果，建立数据的视觉额层册，帮助用户快速定体最核心的属性和指标。",
+          }
+        ]
+      }
+    },
+    methods:{
+      onChange(a, b, c) {
+        console.log(a, b, c);
+      }
     }
-  },
-};
+  }
 </script>
 
 <style scoped lang="scss">

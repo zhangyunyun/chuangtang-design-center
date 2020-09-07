@@ -18,6 +18,27 @@
     width: 100%;
   }
 }
+
+.main{
+  img{
+    display:block;
+    max-width:100%;
+  }
+  .sideTitle{
+    text-align: center;
+    font-weight: bold;
+    height: 30px;
+    line-height:30px;
+    font-size:30px;
+    margin-top:30px;
+    margin-bottom:30px;
+  }
+  .sideExplain{
+    line-height:1.6;
+    font-size:.28rem;
+  }
+}
+
 @media only screen and (max-width: 976px) {
   .banner {
     &__text{
@@ -37,4 +58,23 @@
       width: 100%;
     }
   }
+
+  .main{
+    img.discraptImg{
+      height:500px;
+    }
+  }
+  .itemList{
+    margin-top:20px;
+  }
+
+  /*提供服务*/
+  .sideServe {
+    .serveMark {
+      .serveMarkInner {
+        padding: 0;
+      }
+    }
+  }
 }
+

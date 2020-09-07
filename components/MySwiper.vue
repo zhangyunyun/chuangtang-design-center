@@ -34,94 +34,93 @@
   </div>
 </template>
 
-<script type="text/ecmascript-6">
-export default {
-  data() {
-    return {
-      swiperList:[
-        require('../assets/images/dw/img_08.png'),
-        require('../assets/images/dw/img_08.png'),
-        require('../assets/images/dw/img_08.png'),
-        require('../assets/images/dw/img_08.png'),
-        require('../assets/images/dw/img_08.png'),
-      ],
-      current:0,
+<script>
+  export default {
+    data() {
+      return {
+        swiperList:[
+          require('../assets/images/dw/img_08.png'),
+          require('../assets/images/dw/img_08.png'),
+          require('../assets/images/dw/img_08.png'),
+          require('../assets/images/dw/img_08.png'),
+          require('../assets/images/dw/img_08.png')
+        ],
+        current:0
+      }
+    },
+    methods:{
+      afterChange(current){
+        // console.log(current);
+      }
+    },
+    computed: {
+      currentImg() {
+        return 'background:url('+ require(this.swiperList[this.current]) +')'
+      }
     }
-  },
-  methods:{
-    afterChange(current){
-      // console.log(current);
-    }
-  },
-  computed: {
-    currentImg() {
-      return 'background:url('+ require(this.swiperList[this.current]) +')'
-    }
-  },
-}
+  }
 </script>
 
 <style scoped lang="scss">
-.swiper{
-  position: relative;
-  background-size: auto 120%;
-  background-position:center center;
-  background-repeat:no-repeat;
-  padding-bottom: 40px;
-  margin-top: 35px;
-  overflow:hidden;
-  &::after{
-    content:"";
-    display:block;
-    position:absolute;
-    top:0;
-    left:0;
-    right:0;
-    bottom:0;
-    background: rgba(0,0,0,.8);
-    z-index:1;
-  }
-  &-content{
-    position:relative;
-    z-index:2;
-  }
-  &__title{
-    text-align: center;
-    font-size: 38px;
-    font-weight: bold;
-    padding-top: 40px;
-    line-height: 1;
+  .swiper{
+    position: relative;
+    background-size: auto 120%;
+    background-position:center center;
+    background-repeat:no-repeat;
     padding-bottom: 40px;
+    margin-top: 35px;
+    overflow:hidden;
+    &::after{
+      content:"";
+      display:block;
+      position:absolute;
+      top:0;
+      left:0;
+      right:0;
+      bottom:0;
+      background: rgba(0,0,0,.8);
+      z-index:1;
+    }
+    &-content{
+      position:relative;
+      z-index:2;
+    }
+    &__title{
+      text-align: center;
+      font-size: 38px;
+      font-weight: bold;
+      padding-top: 40px;
+      line-height: 1;
+      padding-bottom: 40px;
+      color: #fff;
+    }
+    img{
+      width:100%;
+    }
+  }
+  /* For demo */
+  .ant-carousel ::v-deep .slick-slide {
+    padding: 0 80px;
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+  .ant-carousel ::v-deep .custom-slick-arrow {
+    width: 40px;
+    height: 40px;
+    font-size: 40px;
+    color: #fff;
+    // background-color: rgba(31, 45, 61, 0.11);
+    opacity: 0.5;
+  }
+  .ant-carousel ::v-deep .custom-slick-arrow:before {
+    display: none;
+  }
+  .ant-carousel ::v-deep .custom-slick-arrow:hover {
+    opacity: 0.8;
+  }
+  .ant-carousel ::v-deep .slick-slide h3 {
     color: #fff;
   }
-  img{
-    width:100%;
-  }
-}
-/* For demo */
-.ant-carousel ::v-deep .slick-slide {
-  padding: 0 80px;
-  img{
-    width: 100%;
-    display: block;
-  }
-}
-.ant-carousel ::v-deep .custom-slick-arrow {
-  width: 40px;
-  height: 40px;
-  font-size: 40px;
-  color: #fff;
-  // background-color: rgba(31, 45, 61, 0.11);
-  opacity: 0.5;
-}
-.ant-carousel ::v-deep .custom-slick-arrow:before {
-  display: none;
-}
-.ant-carousel ::v-deep .custom-slick-arrow:hover {
-  opacity: 0.8;
-}
-
-.ant-carousel ::v-deep .slick-slide h3 {
-  color: #fff;
-}
 </style>

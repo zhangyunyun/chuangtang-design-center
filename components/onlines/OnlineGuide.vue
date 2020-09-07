@@ -1,41 +1,50 @@
 <template>
-  <div class="sideBox sideOnline">
-    <div class="sideCont">
-      <h2 class="sideTitle">线下会面</h2>
-      <div class="onlineCont">
-        <ul class="onlineTab">
-          <li :class="{current:tabIndex == index}"
-              v-for="(tab,index) in tabList"
-              :key="index"
-              v-on:click="changeTab(index)">
-            <span>{{ tab }}</span>
-          </li>
-          <!--<li><span>深圳</span></li>
-          <li><span>北京</span></li>
-          <li><span>杭州</span></li>-->
-        </ul>
-        <div class="onlinePanel">
-          <div class="panel" v-show="panelNum == index" v-for="(panel, index) in panelList" :key="index">
-            <div class="pLt">
-              <h3>{{ panel.name }}</h3>
-              <dl>
-                <dt>联系人</dt>
-                <dd>{{ panel.linkName }}</dd>
-                <dt>电话</dt>
-                <dd><b>{{ panel.linkPhone }}</b></dd>
-                <dt>扫二维码，添加好友</dt>
-                <dd>
-                  <img :src="panel.linkCode" alt="">
-                </dd>
-              </dl>
-            </div>
-            <div class="pRt">
-              <img :src="panel.linkMap" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="online">
+    <a-row class="sideOnline">
+      <a-col :lg="4" :xs="2"></a-col>
+      <a-col :lg="16" :xs="20">
+        <a-row>
+          <a-col :span="24">
+            <h2 class="sideTitle">线下会面</h2>
+          </a-col>
+        </a-row>
+        <a-row>
+          <a-tabs
+            default-active-key="1"
+            :tab-position="mode"
+            @prevClick="callback"
+            @nextClick="callback">
+            <a-tab-pane v-for="(online,index) in onlineList" :key="index+1" :tab="online.name" key="index+1">
+              <a-row>
+                <a-col :lg="6">
+                  <div class="pLt">
+                    <h3>{{ online.name }}</h3>
+                    <dl>
+                      <dt>联系人</dt>
+                      <dd>{{ online.linkName }}</dd>
+                      <dt>电话</dt>
+                      <dd><b>{{ online.linkPhone }}</b></dd>
+                    </dl>
+                    <dl>
+                      <dt>扫二维码，添加好友</dt>
+                      <dd>
+                        <img :src="online.linkCode" alt="">
+                      </dd>
+                    </dl>
+                  </div>
+                </a-col>
+                <a-col :lg="18">
+                  <div class="pRt">
+                    <img :src="online.linkMap" alt="">
+                  </div>
+                </a-col>
+              </a-row>
+            </a-tab-pane>
+          </a-tabs>
+        </a-row>
+      </a-col>
+      <a-col :lg="4" :xs="2"></a-col>
+    </a-row>
   </div>
 </template>
 
@@ -44,10 +53,10 @@
     name: "online",
     data(){
       return{
+        mode: 'top',
         tabIndex:0,
-        tabList:['山海总部','深圳','北京','杭州'],
         panelNum:0,
-        panelList:[
+        onlineList:[
           {
             'name':'上海总部',
             'linkName':'青木',
@@ -80,117 +89,73 @@
       }
     },
     methods:{
-      changeTab(index){
-        this.tabIndex = index
-        this.panelNum = index
+      callback(val) {
+        console.log(val);
       }
     }
   }
 </script>
 
 <style type="text/scss" lang="scss" scoped>
-.sideBox{
-  position: relative;
-  img{
-    position: relative;
-    width:100%;
+.sideTitle{
+  text-align: center;
+  font-weight: bold;
+  height: 30px;
+  line-height:30px;
+  font-size:30px;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.online{
+  padding-top:1.5rem;
+  .ant-tabs{
+    font-size:.26rem!important;
   }
-  .sideTitle{
-    text-align: center;
-    font-weight: bold;
-    height: .8rem;
-    line-height: .8rem;
-    font-size: .45rem;
+  .ant-tabs-nav-container{
+    font-size:.26rem!important;
+    color:#f00;
   }
-  .sideCont{
-    width:1200px;
-    margin:0 auto;
-    position:relative;
+  .ant-tabs-nav{
+    display: flex!important;
+    flex-wrap: nowrap!important;
+  }
+  .ant-tabs-nav .ant-tabs-tab{
+    flex:1!important;
+    font-size:.26rem!important;
   }
 }
 
 .sideOnline{
   background:#f7f7f7;
   padding:.6rem 0;
-  .onlineCont{
-    margin-top:.4rem;
-    position:relative;
-  }
-  .onlineTab{
-    display: flex;
-    flex-wrap: nowrap;
-    height:.8rem;
-    line-height:.8rem;
-    border-bottom:1px solid #d7d3d0;
-    li{
-      flex: 1;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      span{
-        display:inline-block;
-        position:relative;
-        font-size:.28rem;
-        cursor:pointer;
+  .pLt{
+    h3{
+      font-size:.32rem;
+      font-weight:bold;
+    }
+    dl{
+      dt{
+        font-size:.22rem;
+        color:#999;
+        margin-top:.35rem;
       }
-      &.current{
-        span{
-          &:after{
-            position: absolute;
-            content: "";
-            height:5px;
-            width:.8rem;
-            left:calc(50% - .4rem);
-            bottom:0;
-            background:#cfa05a;
-          }
+      dd{
+        font-size:.32rem;
+        img{
+          margin-top:.15rem;
+          width:3rem;
+          height:3rem;
         }
       }
     }
   }
-  .onlinePanel{
-    .panel{
-      display: table;
-      table-layout: fixed;
+  .pRt{
+    img{
       width:100%;
-      .pLt,.pRt{
-        display: table-cell;
-        position: relative;
-        vertical-align:top;
-        padding:.15rem 0;
-      }
-      .pLt{
-        width:5rem;
-        h3{
-          font-size:.32rem;
-          font-weight:bold;
-        }
-        dl{
-          dt{
-            font-size:.20rem;
-            color:#999;
-            margin-top:.35rem;
-          }
-          dd{
-            font-size:.32rem;
-            img{
-              margin-top:.15rem;
-              width:3rem;
-              height:3rem;
-            }
-          }
-        }
-      }
-      .pRt{
-        padding-left:.25rem;
-        img{
-          width:100%;
-          display: block;
-        }
-      }
+      display: block;
+      height:7.5rem;
     }
   }
 }
-
-
 </style>

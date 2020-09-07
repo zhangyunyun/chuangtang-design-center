@@ -12,8 +12,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
-import nuxt_plugin_plugin_05c328d6 from 'nuxt_plugin_plugin_05c328d6' // Source: .\\components\\plugin.js (mode: 'all')
-import nuxt_plugin_axios_2980adf9 from 'nuxt_plugin_axios_2980adf9' // Source: .\\axios.js (mode: 'all')
+import nuxt_plugin_plugin_22ae2c3b from 'nuxt_plugin_plugin_22ae2c3b' // Source: .\\components\\plugin.js (mode: 'all')
+import nuxt_plugin_axios_951c3e44 from 'nuxt_plugin_axios_951c3e44' // Source: .\\axios.js (mode: 'all')
 import nuxt_plugin_antdui_2b2dca90 from 'nuxt_plugin_antdui_2b2dca90' // Source: ..\\plugins\\antd-ui (mode: 'all')
 
 // Component: <ClientOnly>
@@ -53,7 +53,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"title":"chuangtang-design-center","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"## Build Setup"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"\u002Fcss\u002Freset.css"}],"script":[{"type":"text\u002Fjavascript","charset":"utf-8","src":"\u002Fjs\u002Fflexible.js"}],"style":[]},
+    head: {"title":"chuangtang-design-center","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"```bash\r # install dependencies\r $ npm install"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"},{"rel":"stylesheet","href":"\u002Fcss\u002Freset.css"}],"script":[{"type":"text\u002Fjavascript","charset":"utf-8","src":"\u002Fjs\u002Fflexible.js"}],"style":[]},
 
     router,
     nuxt: {
@@ -167,12 +167,12 @@ async function createApp(ssrContext, config = {}) {
   }
   // Plugin execution
 
-  if (typeof nuxt_plugin_plugin_05c328d6 === 'function') {
-    await nuxt_plugin_plugin_05c328d6(app.context, inject)
+  if (typeof nuxt_plugin_plugin_22ae2c3b === 'function') {
+    await nuxt_plugin_plugin_22ae2c3b(app.context, inject)
   }
 
-  if (typeof nuxt_plugin_axios_2980adf9 === 'function') {
-    await nuxt_plugin_axios_2980adf9(app.context, inject)
+  if (typeof nuxt_plugin_axios_951c3e44 === 'function') {
+    await nuxt_plugin_axios_951c3e44(app.context, inject)
   }
 
   if (typeof nuxt_plugin_antdui_2b2dca90 === 'function') {
